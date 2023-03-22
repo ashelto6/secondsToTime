@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+
 std::string secondsToTime(int seconds)
 {
 /* GETTING HOURS */
@@ -16,20 +17,18 @@ std::string secondsToTime(int seconds)
         }
     }
 
-    std::string str_hr;
+    std::string str_hr, str_mins, str_secs;
     if (hr < 10) { str_hr = "0" + std::to_string(hr); }
     else { str_hr = std::to_string(hr); }
 
 /* GETTING MINUTES */
     double minsSecs = (hrsMinsSecs - whole_hr) * 60;
     int mins = minsSecs;
-    std::string str_mins;
     if (mins < 10) { str_mins = "0" + std::to_string(mins); }
     else { str_mins = std::to_string(mins); }
 
 /* GETTING SECONDS */
     int secs = round(((minsSecs - mins) * 60));
-    std::string str_secs;
     if (secs < 10) { str_secs = "0" + std::to_string(secs); }
     else { str_secs = std::to_string(secs); }
 
