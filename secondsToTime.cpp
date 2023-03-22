@@ -40,11 +40,8 @@ std::string secondsToTime(int seconds)
     return time;
 }
 
-
 int main(int argc, char** argv)
 {
     std::string time = secondsToTime(std::stoi(argv[1]));
-
     std::cout<< time;
-    
 }
